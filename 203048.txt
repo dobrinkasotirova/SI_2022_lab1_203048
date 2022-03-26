@@ -1,0 +1,327 @@
+1. Инсталирано
+2. Преименувано во master
+3. Креиран репозиториум со име SI_2022_lab1_203048, приватен со README file во кој го пишува моето име, презиме и индекс.
+4. Клониран локално:
+C:\SI_2022_Lab>git clone https://github.com/dobrinkasotirova/SI_2022_lab1_203048.git
+
+Cloning into 'SI_2022_lab1_203048'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+
+5. Додаден фајл со име shopping_list.txt:
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git add .
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git commit -m "Add 5 items to the shopping list"
+[master bc3faf3] Add 5 items to the shopping list
+ 1 file changed, 5 insertions(+)
+ create mode 100644 shopping_list.txt
+
+6. На секоја од 5те претходни ставки, додадете им количина:
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git add .
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git commit -m "Add quantities to the items"
+[master 0e44b9b] Add quantities to the items
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+7. Креирајте 2 гранки: branch1 и branch2:
+C:\SI_2022_Lab\SI_2022_lab1_203048>git branch branch1
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git branch branch2
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git branch
+  branch1
+  branch2
+* master
+8. Внесете ги досегашните логови во документацијата: 
+C:\SI_2022_Lab\SI_2022_lab1_203048>git log
+commit 0e44b9b2379fdf71ec22c3f56b5b487bbf25e7c0 (HEAD -> branch1, master, branch2)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:12:39 2022 +0100
+
+    Add quantities to the items
+
+commit bc3faf3bb68fb8ed85afa0d18bca622eee8e1d64
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:11:22 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit a9301aab735b19b9b0a9502a4183c48a9bd86fa0 (origin/master, origin/HEAD)
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:56:05 2022 +0100
+
+    Update README.md
+
+commit d5d6598e2097ff06cc547bab160db325af4b6e98
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:55:39 2022 +0100
+
+    Update README.md
+
+commit 095b18388f20c8a8ebba0b8ae3a4aab3d7a2b72e
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:54:08 2022 +0100
+
+    Initial commit
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout master
+Switched to branch 'master'
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git log
+commit 0e44b9b2379fdf71ec22c3f56b5b487bbf25e7c0 (HEAD -> master, branch2, branch1)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:12:39 2022 +0100
+
+    Add quantities to the items
+
+commit bc3faf3bb68fb8ed85afa0d18bca622eee8e1d64
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:11:22 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit a9301aab735b19b9b0a9502a4183c48a9bd86fa0 (origin/master, origin/HEAD)
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:56:05 2022 +0100
+
+    Update README.md
+
+commit d5d6598e2097ff06cc547bab160db325af4b6e98
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:55:39 2022 +0100
+
+    Update README.md
+
+commit 095b18388f20c8a8ebba0b8ae3a4aab3d7a2b72e
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:54:08 2022 +0100
+
+    Initial commit
+:q
+9.  Синхронизирајте ги сите гранки со оддалечениот репозиториум:
+C:\SI_2022_Lab\SI_2022_lab1_203048>git pull
+Already up to date.
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout branch1
+Switched to branch 'branch1'
+C:\SI_2022_Lab\SI_2022_lab1_203048>git pull origin master
+From https://github.com/dobrinkasotirova/SI_2022_lab1_203048
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout branch2
+Switched to branch 'branch2'
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git pull origin master
+From https://github.com/dobrinkasotirova/SI_2022_lab1_203048
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+10. Префрлете се на гранката branch1
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout branch1
+Switched to branch 'branch1'
+11. Сменете ја количината на петтата ставка во shopping_list.txt и направете commit
+со порака “Change quantity of item #5”
+C:\SI_2022_Lab\SI_2022_lab1_203048>git add .
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git commit -m "Change quantity of item #5"
+[branch1 047adfc] Change quantity of item #5
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+12. Вратете се на гранката master
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+13. Сменете ја количината на втората ставка во shopping_list.txt и направете commit
+со порака “Change quantity of item #2”
+C:\SI_2022_Lab\SI_2022_lab1_203048>git add .
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git commit -m "Change quantity of item #2"
+[master 9a2b1a0] Change quantity of item #2
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+14.  Синхронизирајте ги сите гранки со оддалечениот репозиториум
+ C:\SI_2022_Lab\SI_2022_lab1_203048> git push --set-upstream origin branch1
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 331 bytes | 331.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'branch1' on GitHub by visiting:
+remote:      https://github.com/dobrinkasotirova/SI_2022_lab1_203048/pull/new/branch1
+remote:
+To https://github.com/dobrinkasotirova/SI_2022_lab1_203048.git
+ * [new branch]      branch1 -> branch1
+branch 'branch1' set up to track 'origin/branch1'.
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout branch2
+Switched to branch 'branch2'
+
+C:\SI_2022_Lab\SI_2022_lab1_203048> git push --set-upstream origin branch2
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/dobrinkasotirova/SI_2022_lab1_203048/pull/new/branch2
+remote:
+To https://github.com/dobrinkasotirova/SI_2022_lab1_203048.git
+ * [new branch]      branch2 -> branch2
+branch 'branch2' set up to track 'origin/branch2'.
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>
+
+15.  Префрлете се на гранката branch2
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout branch2
+Already on 'branch2'
+Your branch is up to date with 'origin/branch2'.
+16.  Променете го името на ставката бр. 4 во листата и направете commit со порака
+“Modify item #4”
+C:\SI_2022_Lab\SI_2022_lab1_203048>git add .
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git commit -m "Modify item #4"
+[branch2 28d4945] Modify item #4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+17. Внесете ги досегашните логови во документацијата.
+commit 28d4945ea5500e5be39e30645fd010bfdb819cf1 (HEAD -> branch2)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:29:14 2022 +0100
+
+    Modify item #4
+
+commit 0e44b9b2379fdf71ec22c3f56b5b487bbf25e7c0 (origin/branch2)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:12:39 2022 +0100
+
+    Add quantities to the items
+
+commit bc3faf3bb68fb8ed85afa0d18bca622eee8e1d64
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:11:22 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit a9301aab735b19b9b0a9502a4183c48a9bd86fa0
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:56:05 2022 +0100
+
+    Update README.md
+
+commit d5d6598e2097ff06cc547bab160db325af4b6e98
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:55:39 2022 +0100
+
+    Update README.md
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\SI_2022_Lab\SI_2022_lab1_203048>git log
+commit 9a2b1a01295830f733c4bb30cc128911c72b8017 (HEAD -> master, origin/master, origin/HEAD)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:25:00 2022 +0100
+
+    Change quantity of item #2
+
+commit 0e44b9b2379fdf71ec22c3f56b5b487bbf25e7c0 (origin/branch2)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:12:39 2022 +0100
+
+    Add quantities to the items
+
+commit bc3faf3bb68fb8ed85afa0d18bca622eee8e1d64
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:11:22 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit a9301aab735b19b9b0a9502a4183c48a9bd86fa0
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:56:05 2022 +0100
+
+    Update README.md
+
+commit d5d6598e2097ff06cc547bab160db325af4b6e98
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:55:39 2022 +0100
+
+    Update README.md
+:q
+
+18. Додадете 6та ставка во shopping_list.txt со промена на последниот commit. Сега
+пораката треба да гласи “Modify item #4 and add item #6”
+C:\SI_2022_Lab\SI_2022_lab1_203048>git log --onelineLines starting
+758c729 (HEAD -> branch2) Modify item #4 and add item #6the commit.
+0e44b9b (origin/branch2) Add quantities to the items
+bc3faf3 Add 5 items to the shopping list100
+a9301aa Update README.md
+d5d6598 Update README.mdprogress; onto 8fb4436
+095b183 Initial commit7 commands done):wq
+19. Внесете ги досегашните логови во документацијата:
+C:\SI_2022_Lab\SI_2022_lab1_203048>git log
+commit 758c729774d0456ae8023948c3984242f660ac8f (HEAD -> branch2, origin/branch2)
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:29:14 2022 +0100
+
+    Modify item #4 and add item #6
+
+commit 0e44b9b2379fdf71ec22c3f56b5b487bbf25e7c0
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:12:39 2022 +0100
+
+    Add quantities to the items
+
+commit bc3faf3bb68fb8ed85afa0d18bca622eee8e1d64
+Author: Dobrinka Sotirova <dobrinka.sotirova@gmail.com>
+Date:   Sat Mar 26 22:11:22 2022 +0100
+
+    Add 5 items to the shopping list
+
+commit a9301aab735b19b9b0a9502a4183c48a9bd86fa0
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:56:05 2022 +0100
+
+    Update README.md
+
+commit d5d6598e2097ff06cc547bab160db325af4b6e98
+Author: Dobrinka Sotirova <86257832+dobrinkasotirova@users.noreply.github.com>
+Date:   Sat Mar 26 21:55:39 2022 +0100
+
+    Update README.md
+:wq
+20. Префрлете се на гранката master и спојте ја гранката branch1 кон master
+C:\SI_2022_Lab\SI_2022_lab1_203048>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+~
+C:\SI_2022_Lab\SI_2022_lab1_203048>git merge branch1
+Auto-merging shopping_list.txt
+Merge made by the 'ort' strategy.
+ shopping_list.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)_EDITMSG[+] [unix] (22:40 26/03/2022)                             20,1 All
+"C:/SI_2022_Lab/SI_2022_lab1_203048/.git/COMMIT_EDITMSG" [unix] 20L, 588B written
+21. Спојте ја и гранката branch2 кон мастер.
+C:\SI_2022_Lab\SI_2022_lab1_203048>git merge branch2
+Auto-merging shopping_list.txt
+CONFLICT (content): Merge conflict in shopping_list.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+Решение:
+-git rebase master
+-Локални промени
+-git rebase --continue
+-git checkout master
+-git merge branch2
+
+
+
+
